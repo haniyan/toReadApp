@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Co by tu przeczytać?</title>
     <link rel="stylesheet" href="css/styles.css">
 
@@ -11,14 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
-    <script src="js/list.js"></script>
-    <script src="js/form.js"></script>
+
 </head>
 <body>
-
-
 <main class="container">
     <h2 class="main-title">Co by tu przeczytać?</h2>
+    <div class="error"></div>
     <form class="form">
 <!--        trzeba gdzies jeszcze dodać wskaznik czytania zeby wprowadzac ile stron-->
         <div class="form-container">
@@ -34,6 +32,7 @@
                 <label class="label" for="pages">Liczba stron</label>
                 <input type="text" id="pages" class="form-pages form-control" placeholder="Ile ma stron?">
             </div>
+
         </div>
 
         <button type="button" id="add" class="add">Dodaj</button>
@@ -42,11 +41,11 @@
         <div class="col-1">
             <h4 class="title">Do przeczytania</h4>
             <div  id="toRead" class="list-group">
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
+                <span class="list-group-item">Stephen King<strong><br> Carrie</strong><br>234 str.</span>
+                <span class="list-group-item">Stephen King<strong><br> Dr Sen</strong><br>234 str.</span>
+                <span class="list-group-item">Stephen King<strong><br> Martwa strefa</strong><br>234 str.</span>
+                <span class="list-group-item">Stephen King<strong><br> Talizman</strong><br>234 str.</span>
+                <span class="list-group-item">Stephen King<strong><br> Szkieletowa załoga</strong><br>234 str.</span>
             </div>
             <div class="progress">
 <!--                miejsce na wskaźnik postępu czytania-->
@@ -55,18 +54,17 @@
         <div class="col-2">
             <h4 class="title">Przeczytane</h4>
             <div  id="alreadyRead" class="list-group">
-                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
-                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
-                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
-                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
-                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
+                <span class="list-group-item ">Charles Coben<strong><br>Mów mi Win.</strong><br>345 str.</span>
+                <span class="list-group-item ">Charles Coben<strong><br>O krok za daleko</strong><br>819 str.</span>
+                <span class="list-group-item ">Charles Coben<strong><br>Zostań przy mnie</strong><br>733 str.</span>
+
             </div>
             <div class="ratio">
-<!--                miejsce na liniki z ocena ksiazek-->
+<!--                miejsce na liniki z ocena ksiazek--><br>
             </div>
         </div>
     </div>
 </main>
 </body>
-
+<script src="js/app.js"></script>
 </html>

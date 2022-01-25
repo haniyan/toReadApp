@@ -173,6 +173,12 @@ body .container {
   align-items: center;
   justify-content: center;
 }
+body .container .error {
+  height: 2em;
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+}
 body .container .main-title {
   font-size: 1.5em;
   margin-bottom: 1em;
