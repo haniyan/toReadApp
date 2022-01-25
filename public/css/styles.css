@@ -1,0 +1,131 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  style: none;
+}
+
+.form {
+  padding: 2em;
+  background-color: #eaeea2;
+  border: 0.15em solid rgba(242, 191, 135, 0.7);
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.form .form-group {
+  padding: 0.7em;
+  display: flex;
+  justify-content: space-between;
+}
+.form .form-group .form-control {
+  padding: 0.1em 1em;
+  border-radius: 2em;
+  width: 70%;
+  font-size: 1em;
+}
+.form .add {
+  font-size: 1em;
+  padding: 0.5em 1.3em;
+  border: 2px solid rgba(242, 191, 135, 0.7);
+  border-radius: 2em;
+  background-color: rgba(242, 191, 135, 0.7);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #94e9e7;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+}
+body .container {
+  width: 1240px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .container .form {
+  width: 80%;
+}
+body .container .read-container {
+  display: flex;
+}
+body .container .read-container .col-1, body .container .read-container .col-2 {
+  margin-top: 1em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+body .container .read-container .col-1 .title, body .container .read-container .col-2 .title {
+  padding: 0.5em;
+  align-self: center;
+}
+/*# sourceMappingURL=styles.css.map */

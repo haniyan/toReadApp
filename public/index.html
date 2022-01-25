@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Co by tu przeczytać?</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<main class="container">
+    <form class="form">
+<!--        moze place holdery dodac i focusowanie na formularz??-->
+<!--        trzeba gdzies jeszcze dodać wskaznik czytania zeby wprowadzac ile stron-->
+        <div class="form-container">
+            <div class="form-group">
+                <label class="label" for="author">Autor</label>
+                <input type="text" id="author" class="form-author form-control">
+            </div>
+            <div class="form-group">
+                <label class="label" for="title">Tytuł książki</label>
+                <input type="text" id="title" class="form-title form-control">
+            </div>
+            <div class="form-group">
+                <label class="label" for="pages">Liczba stron</label>
+                <input type="text" id="pages" class="form-pages form-control">
+            </div>
+        </div>
+
+        <button type="button" id="add" class="add">Dodaj</button>
+    </form>
+    <div class="read-container">
+        <div class="col-1">
+            <h4 class="title">Do przeczytania</h4>
+            <div  id="toRead" class="list-group">
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
+            </div>
+            <div class="progress">
+<!--                miejsce na wskaźnik postępu czytania-->
+            </div>
+        </div>
+        <div class="col-2">
+            <h4 class="title">Przeczytane</h4>
+            <div  id="alreadyRead" class="list-group">
+                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
+                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
+                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
+                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
+                <a href="#" class="list-group-item "><strong>Tytuł </strong>po</a>
+            </div>
+            <div class="ratio">
+<!--                miejsce na liniki z ocena ksiazek-->
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+<script src="../src/js/readTable.js"></script>
+<script src="../src/js/bookForm.js"></script>
+</html>
