@@ -1,39 +1,40 @@
 .form{
-  padding: 2em;
+  padding: 0.5em;
   background-color: $color-yellow;
-  border: 0.15em solid $color-orange;
-  border-radius: 2em;
+  border: 0.1em solid $color-orange;
+  border-radius: 1em;
   display: flex;
   flex-direction: column;
 
 
   .form-group{
-    padding: 0.7em;
+    padding: 0.35em;
     display: flex;
     justify-content: space-between;
 
    .form-control{
-      padding: 0.1em 1em;
-      border-radius: 2em;
+      padding: 0.1em 0.5em;
+      border-radius: 1em;
       width: 70%;
       font-size: 1em;
-
     }
-
-
 
   }
 
   .add{
-
-    font-size: 1em;
-    padding: 0.5em 1.3em;
+    font-size: 0.8em;
+    padding: 0.5em 0.75em;
     border: 2px solid $color-orange;
-    border-radius: 2em;
+    border-radius: 1em;
     background-color: $color-orange;
+    transition: 1s;
 
+    &:hover{
+      cursor: pointer;
+      border: 2px solid $color-blue;
+      background-color: $color-mint;
 
+    }
   }
-
 
 }

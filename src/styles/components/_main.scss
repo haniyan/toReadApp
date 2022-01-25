@@ -1,16 +1,18 @@
 body {
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  //background-image: url(../../../public/imgs/background.jpg);
+  //background-image: url("../../../public/assets/background.jpg");
   //background-size: cover;
+  //background-repeat: repeat;
 
 
   background-color: $color-mint;
 
   font-family: $main-font;
-  font-size: 2em;
+  font-size: 1.5em;
 
   .container {
     width: 1240px;
@@ -20,23 +22,29 @@ body {
     align-items: center;
     justify-content: center;
 
+    .main-title{
+      font-size: 1.5em;
+      margin-bottom:1em;
+
+
+    }
+
     .form{
-      width: 80%;
+      width: 55%;
 
     }
 
     .read-container {
       display: flex;
 
-
       .col-1, .col-2 {
-        margin-top: 1em;
+        margin-top: 2em;
         width: 50%;
         display: flex;
         flex-direction: column;
 
         .title {
-          padding: 0.5em;
+          padding: 0.5em 1em;
           align-self: center;
 
 
