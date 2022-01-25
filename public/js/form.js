@@ -2,7 +2,7 @@
 const author = document.getElementById("author");
 const title = document.getElementById("title");
 const pages = document.getElementById("pages");
-
+console.log(author)
 //wysylanie formularza
 const add = document.getElementById("add");
 

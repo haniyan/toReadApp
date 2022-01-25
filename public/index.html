@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <script src="js/list.js"></script>
+    <script src="js/form.js"></script>
 </head>
 <body>
 
@@ -17,20 +20,19 @@
 <main class="container">
     <h2 class="main-title">Co by tu przeczytać?</h2>
     <form class="form">
-<!--        moze place holdery dodac i focusowanie na formularz??-->
 <!--        trzeba gdzies jeszcze dodać wskaznik czytania zeby wprowadzac ile stron-->
         <div class="form-container">
             <div class="form-group">
                 <label class="label" for="author">Autor</label>
-                <input type="text" id="author" class="form-author form-control">
+                <input type="text" id="author" class="form-author form-control" placeholder="Podaj autora">
             </div>
             <div class="form-group">
                 <label class="label" for="title">Tytuł książki</label>
-                <input type="text" id="title" class="form-title form-control">
+                <input type="text" id="title" class="form-title form-control" placeholder="Podaj tytuł">
             </div>
             <div class="form-group">
                 <label class="label" for="pages">Liczba stron</label>
-                <input type="text" id="pages" class="form-pages form-control">
+                <input type="text" id="pages" class="form-pages form-control" placeholder="Ile ma stron?">
             </div>
         </div>
 
@@ -40,11 +42,11 @@
         <div class="col-1">
             <h4 class="title">Do przeczytania</h4>
             <div  id="toRead" class="list-group">
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
-                <a href="#" class="list-group-item"><strong>Tytuł </strong>do</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
+                <a href="#" class="list-group-item"><strong>Tytuł </strong>do przeczytania</a>
             </div>
             <div class="progress">
 <!--                miejsce na wskaźnik postępu czytania-->
@@ -67,6 +69,4 @@
 </main>
 </body>
 
-<script src="../src/js/readTable.js"></script>
-<script src="../src/js/bookForm.js"></script>
 </html>

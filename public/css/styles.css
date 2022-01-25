@@ -127,10 +127,19 @@ button {
   justify-content: space-between;
 }
 .form .form-group .form-control {
-  padding: 0.1em 0.5em;
+  padding: 0.1em 1em;
   border-radius: 1em;
   width: 70%;
   font-size: 1em;
+}
+.form .form-group .form-control::-moz-placeholder {
+  color: rgba(229, 109, 89, 0.7);
+}
+.form .form-group .form-control:-ms-input-placeholder {
+  color: rgba(229, 109, 89, 0.7);
+}
+.form .form-group .form-control::placeholder {
+  color: rgba(229, 109, 89, 0.7);
 }
 .form .add {
   font-size: 0.8em;
@@ -143,7 +152,7 @@ button {
 .form .add:hover {
   cursor: pointer;
   border: 2px solid #20b4d8;
-  background-color: rgba(148, 233, 231, 0.58);
+  background-color: #b8efed;
 }
 
 body {
@@ -152,7 +161,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(148, 233, 231, 0.58);
+  background-color: #b8efed;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
 }
