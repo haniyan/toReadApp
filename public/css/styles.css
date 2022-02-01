@@ -80,8 +80,61 @@ body {
   background-color: #b8efed;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  position: relative;
 }
-body .container {
+body .ratio-container {
+  width: 15vw;
+  border: 2px solid red;
+  position: absolute;
+  top: 0;
+  right: 3vw;
+}
+body .ratio-container .ratio-title {
+  font-size: 1.5em;
+  margin-bottom: 0.8em;
+}
+body .ratio-container .star-form-container {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+}
+body .ratio-container .alreadyRead-table {
+  width: 100%;
+  padding: 1em;
+}
+body .ratio-container .alreadyRead-table .table-row {
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-around;
+}
+body .ratio-container .alreadyRead-table .table-row .stars-outer {
+  position: relative;
+  display: inline-block;
+}
+body .ratio-container .alreadyRead-table .table-row .stars-outer:before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ccc;
+}
+body .ratio-container .alreadyRead-table .table-row .stars-outer .stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+body .ratio-container .alreadyRead-table .table-row .stars-outer .stars-inner:before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: gold;
+}
+body .ratio-container .alreadyRead-table .table-row .number-rating {
+  margin-left: 15px;
+}
+body .main-container {
   width: 1240px;
   border: 2px solid red;
   height: 100vh;
@@ -90,13 +143,13 @@ body .container {
   align-items: center;
   justify-content: center;
 }
-body .container .error {
+body .main-container .error {
   height: 2em;
   color: red;
   font-size: 1em;
   font-weight: bold;
 }
-body .container .main-title {
+body .main-container .main-title {
   margin-bottom: 1em;
   padding: 0.5em;
   border-radius: 50px;
@@ -104,7 +157,7 @@ body .container .main-title {
   font-size: 1.5em;
   font-weight: bold;
 }
-body .container .form {
+body .main-container .form {
   padding: 1.5em;
   background-color: #eaeea2;
   border: 0.1em solid rgba(242, 191, 135, 0.7);
@@ -113,27 +166,27 @@ body .container .form {
   flex-direction: column;
   width: 35%;
 }
-body .container .form .form-group {
+body .main-container .form .form-group {
   padding: 0.55em;
   display: flex;
   justify-content: space-between;
 }
-body .container .form .form-group .form-control {
+body .main-container .form .form-group .form-control {
   padding: 0.1em 1em;
   border-radius: 1em;
   width: 70%;
   font-size: 1em;
 }
-body .container .form .form-group .form-control::-moz-placeholder {
+body .main-container .form .form-group .form-control::-moz-placeholder {
   color: rgba(229, 109, 89, 0.7);
 }
-body .container .form .form-group .form-control:-ms-input-placeholder {
+body .main-container .form .form-group .form-control:-ms-input-placeholder {
   color: rgba(229, 109, 89, 0.7);
 }
-body .container .form .form-group .form-control::placeholder {
+body .main-container .form .form-group .form-control::placeholder {
   color: rgba(229, 109, 89, 0.7);
 }
-body .container .form .add {
+body .main-container .form .add {
   font-size: 0.8em;
   padding: 0.5em 0.75em;
   border: 2px solid rgba(242, 191, 135, 0.7);
@@ -141,90 +194,60 @@ body .container .form .add {
   background-color: rgba(242, 191, 135, 0.7);
   transition: 1s;
 }
-body .container .form .add:hover {
+body .main-container .form .add:hover {
   cursor: pointer;
   border: 2px solid #20b4d8;
   background-color: #b8efed;
 }
-body .container .read-container {
+body .main-container .read-container {
   display: flex;
   width: 90%;
 }
-body .container .read-container .col-1, body .container .read-container .col-2 {
+body .main-container .read-container .col-1, body .main-container .read-container .col-2 {
   width: 50%;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-body .container .read-container .col-1 .title, body .container .read-container .col-2 .title {
+body .main-container .read-container .col-1 .title, body .main-container .read-container .col-2 .title {
   padding: 0.5em 1em;
   align-self: center;
   font-size: 1em;
   border-radius: 1em;
   background-color: #eaeea2;
 }
-body .container .read-container .col-1 .list-group, body .container .read-container .col-2 .list-group {
+body .main-container .read-container .col-1 .list-group, body .main-container .read-container .col-2 .list-group {
   display: flex;
   flex-direction: column;
 }
-body .container .read-container .col-1 .list-group .list-group-item, body .container .read-container .col-2 .list-group .list-group-item {
+body .main-container .read-container .col-1 .list-group .list-group-item, body .main-container .read-container .col-2 .list-group .list-group-item {
   margin: 0.3em;
   font-size: 1.2em;
   padding: 0.3em;
   border-radius: 0.7em;
   cursor: pointer;
 }
-body .container .read-container .col-1 {
+body .main-container .read-container .col-1 {
   margin-right: 0.5em;
 }
-body .container .read-container .col-1 .title {
+body .main-container .read-container .col-1 .title {
   background-color: #eaeea2;
 }
-body .container .read-container .col-1 .list-group .list-group-item {
+body .main-container .read-container .col-1 .list-group .list-group-item {
   background-color: #eaeea2;
   transition: 1s;
 }
-body .container .read-container .col-1 .list-group .list-group-item:hover {
+body .main-container .read-container .col-1 .list-group .list-group-item:hover {
   background-color: rgba(135, 208, 135, 0.87);
 }
-body .container .read-container .col-2 {
+body .main-container .read-container .col-2 {
   margin-left: 0.5em;
 }
-body .container .read-container .col-2 .title {
+body .main-container .read-container .col-2 .title {
   background-color: rgba(135, 208, 135, 0.87);
 }
-body .container .read-container .col-2 .list-group .list-group-item {
+body .main-container .read-container .col-2 .list-group .list-group-item {
   background-color: rgba(135, 208, 135, 0.87);
-}
-body .star-container {
-  border: 2px solid red;
-  width: 300px;
-  height: 300px;
-  font-size: 3em;
-}
-body .star-container .stars-outer {
-  position: relative;
-  display: inline-block;
-}
-body .star-container .stars-outer:before {
-  content: "\f005\f005\f005\f005\f005";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: #ccc;
-}
-body .star-container .stars-outer .stars-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-}
-body .star-container .stars-outer .stars-inner:before {
-  content: "\f005\f005\f005\f005\f005";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: gold;
 }
 /*# sourceMappingURL=styles.css.map */

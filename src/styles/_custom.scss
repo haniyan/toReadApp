@@ -11,7 +11,84 @@ body {
   font-family: $main-font;
   font-size: 1em;
 
-  .container {
+  position: relative;
+
+  .ratio-container{
+    width: 15vw;
+
+    border: 2px solid red;
+
+    position: absolute;
+    top: 0;
+    right: 3vw;
+
+
+    .ratio-title{
+      font-size: 1.5em;
+      margin-bottom: 0.8em;
+
+
+    }
+
+    .star-form-container {
+      width: 100%;
+      height: auto;
+      font-size: 1em;
+
+
+    }
+
+    .alreadyRead-table{
+      width: 100%;
+      padding: 1em;
+
+      .table-row{
+        margin: 0.5em;
+        display: flex;
+        justify-content: space-around;
+
+        .book-title{
+
+        }
+        .stars-outer {
+          position: relative; //bo wewnetrzne beda absolute
+          display: inline-block;
+
+          &:before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            font-family: $stars-font;
+            font-weight: 900;
+            color: #ccc;
+          }
+          .stars-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+
+            &:before {
+              content: "\f005 \f005 \f005 \f005 \f005";
+              font-family: $stars-font;
+              font-weight: 900;
+              color: gold;
+            }
+          }
+
+        }
+
+        .number-rating{
+          margin-left: 15px;
+        }
+      }
+
+
+
+    }
+  }
+
+  .main-container {
     width: 1240px;
     border: 2px solid red;
     height: 100vh;
@@ -162,43 +239,6 @@ body {
 
   }
 
-  .star-container {
-    border: 2px solid red;
-    width: 300px;
-    height: 300px;
-    font-size: 3em;
 
-    .stars-outer {
-      position: relative; //bo wewnetrzne beda absolute
-      display: inline-block;
-
-      &:before {
-        content: "\f005 \f005 \f005 \f005 \f005";
-        font-family: $stars-font;
-        font-weight: 900;
-        color: #ccc;
-      }
-
-
-      .stars-inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 0;
-
-        &:before {
-          content: "\f005 \f005 \f005 \f005 \f005";
-          font-family: $stars-font;
-          font-weight: 900;
-          color: gold;
-        }
-      }
-
-    }
-
-
-  }
 
 }
