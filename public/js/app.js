@@ -62,10 +62,6 @@ items.forEach(item => {
     item.addEventListener("click", changePosition)
 })
 
-doneItems.forEach(item =>{
-    item.addEventListener("click", addToRanking)
-})
-
 
 function changePosition() {
     const parent = this.parentElement;
@@ -77,15 +73,22 @@ function changePosition() {
 
 }
 
-function addToRanking(){
-    const newTd = document.createElement("td");
-    rankingTable.appendChild(newTd);
-    newTd.classList.add("book-title");
-//jak dostac sie do tytulu tego, ktory wlasnie klikam???
-    let title = document.querySelector("#toRead span.list-group-item strong").innerHTML;
-    console.log(title)
-    newTd.innerHTML = `<b>${title}</b>`;
+doneItems.forEach(item =>{
+    item.addEventListener("click", addToRanking)
+})
 
+function addToRanking(e){
+console.log(this)
+    const newTr = document.createElement("tr");
+    rankingTable.appendChild(newTr);
+    newTr.classList.add("table-row");
+
+    const newTd = document.createElement("td");
+    newTr.appendChild(newTd);
+    newTd.classList.add("book-title");
+    let title = this.firstElementChild.innerText;
+    console.log(title)
+    newTd.innerHTML = `${title}`;
 }
 
 

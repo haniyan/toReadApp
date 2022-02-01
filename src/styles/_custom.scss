@@ -42,46 +42,57 @@ body {
       width: 100%;
       padding: 1em;
 
-      .table-row{
-        margin: 0.5em;
-        display: flex;
-        justify-content: space-around;
+      .table-body{
 
-        .book-title{
 
-        }
-        .stars-outer {
-          position: relative; //bo wewnetrzne beda absolute
-          display: inline-block;
 
-          &:before {
-            content: "\f005 \f005 \f005 \f005 \f005";
-            font-family: $stars-font;
-            font-weight: 900;
-            color: #ccc;
+
+        .table-row{
+          margin: 0.5em;
+          display: flex;
+          justify-content: space-around;
+
+
+          .book-title{
+            display: flex;
+            flex-direction:column;
+            border: 1px solid orange;
           }
-          .stars-inner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
+
+          .stars-outer {
+            position: relative; //bo wewnetrzne beda absolute
+            display: inline-block;
 
             &:before {
               content: "\f005 \f005 \f005 \f005 \f005";
               font-family: $stars-font;
               font-weight: 900;
-              color: gold;
+              color: #ccc;
             }
+            .stars-inner {
+              position: absolute;
+              top: 0;
+              left: 0;
+              white-space: nowrap;
+              overflow: hidden;
+              width: 0;
+
+              &:before {
+                content: "\f005 \f005 \f005 \f005 \f005";
+                font-family: $stars-font;
+                font-weight: 900;
+                color: gold;
+              }
+            }
+
           }
 
-        }
-
-        .number-rating{
-          margin-left: 15px;
+          .number-rating{
+            margin-left: 15px;
+          }
         }
       }
+
 
 
 

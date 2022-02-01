@@ -102,22 +102,27 @@ body .ratio-container .alreadyRead-table {
   width: 100%;
   padding: 1em;
 }
-body .ratio-container .alreadyRead-table .table-row {
+body .ratio-container .alreadyRead-table .table-body .table-row {
   margin: 0.5em;
   display: flex;
   justify-content: space-around;
 }
-body .ratio-container .alreadyRead-table .table-row .stars-outer {
+body .ratio-container .alreadyRead-table .table-body .table-row .book-title {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid orange;
+}
+body .ratio-container .alreadyRead-table .table-body .table-row .stars-outer {
   position: relative;
   display: inline-block;
 }
-body .ratio-container .alreadyRead-table .table-row .stars-outer:before {
+body .ratio-container .alreadyRead-table .table-body .table-row .stars-outer:before {
   content: "\f005\f005\f005\f005\f005";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #ccc;
 }
-body .ratio-container .alreadyRead-table .table-row .stars-outer .stars-inner {
+body .ratio-container .alreadyRead-table .table-body .table-row .stars-outer .stars-inner {
   position: absolute;
   top: 0;
   left: 0;
@@ -125,13 +130,13 @@ body .ratio-container .alreadyRead-table .table-row .stars-outer .stars-inner {
   overflow: hidden;
   width: 0;
 }
-body .ratio-container .alreadyRead-table .table-row .stars-outer .stars-inner:before {
+body .ratio-container .alreadyRead-table .table-body .table-row .stars-outer .stars-inner:before {
   content: "\f005\f005\f005\f005\f005";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: gold;
 }
-body .ratio-container .alreadyRead-table .table-row .number-rating {
+body .ratio-container .alreadyRead-table .table-body .table-row .number-rating {
   margin-left: 15px;
 }
 body .main-container {
