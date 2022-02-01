@@ -20,21 +20,25 @@ body {
     align-items: center;
     justify-content: center;
 
-    .error{
+    .error {
       height: 2em;
       color: red;
       font-size: 1em;
       font-weight: bold;
 
     }
-    .main-title{
-      font-size: 1.5em;
-      margin-bottom:1em;
 
+    .main-title {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border-radius: 50px;
+      background-color: $color-pink;
+      font-size: 1.5em;
+      font-weight: bold;
 
     }
 
-    .form{
+    .form {
       padding: 1.5em;
       background-color: $color-yellow;
       border: 0.1em solid $color-orange;
@@ -43,17 +47,18 @@ body {
       flex-direction: column;
       width: 35%;
 
-      .form-group{
+      .form-group {
         padding: 0.55em;
         display: flex;
         justify-content: space-between;
 
-        .form-control{
+        .form-control {
           padding: 0.1em 1em;
           border-radius: 1em;
           width: 70%;
           font-size: 1em;
-          &::placeholder{
+
+          &::placeholder {
             color: rgba(229, 109, 89, 0.7);
           }
 
@@ -61,7 +66,7 @@ body {
 
       }
 
-      .add{
+      .add {
         font-size: 0.8em;
         padding: 0.5em 0.75em;
         border: 2px solid $color-orange;
@@ -69,7 +74,7 @@ body {
         background-color: $color-orange;
         transition: 1s;
 
-        &:hover{
+        &:hover {
           cursor: pointer;
           border: 2px solid $color-blue;
           background-color: $color-mint;
@@ -81,11 +86,11 @@ body {
 
     .read-container {
       display: flex;
-      width: 70%;
+      width: 90%;
 
       .col-1, .col-2 {
-        margin-top: 2em;
         width: 50%;
+        margin-top: 2em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -103,11 +108,12 @@ body {
           display: flex;
           flex-direction: column;
 
-          .list-group-item{
+          .list-group-item {
             margin: 0.3em;
             font-size: 1.2em;
             padding: 0.3em;
             border-radius: 0.7em;
+            cursor: pointer;
 
           }
 
@@ -116,6 +122,7 @@ body {
 
       .col-1 {
         margin-right: 0.5em;
+
         .title {
 
           background-color: $color-yellow;
@@ -126,7 +133,7 @@ body {
             background-color: $color-yellow;
             transition: 1s;
 
-            &:hover{
+            &:hover {
               background-color: $color-green;
 
             }
@@ -136,9 +143,11 @@ body {
 
       .col-2 {
         margin-left: 0.5em;
+
         .title {
           background-color: $color-green;
         }
+
         .list-group {
 
           .list-group-item {
@@ -150,6 +159,45 @@ body {
       }
 
     }
+
+  }
+
+  .star-container {
+    border: 2px solid red;
+    width: 300px;
+    height: 300px;
+    font-size: 3em;
+
+    .stars-outer {
+      position: relative; //bo wewnetrzne beda absolute
+      display: inline-block;
+
+      &:before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: $stars-font;
+        font-weight: 900;
+        color: #ccc;
+      }
+
+
+      .stars-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+
+        &:before {
+          content: "\f005 \f005 \f005 \f005 \f005";
+          font-family: $stars-font;
+          font-weight: 900;
+          color: gold;
+        }
+      }
+
+    }
+
 
   }
 
